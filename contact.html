@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Cordon Ombilical</title>
+
+  <!-- Lien CSS : adapte le chemin si besoin -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+<header class="header">
+  <div class="logo">
+    <div class="logo-circle">CO</div>
+    <div class="logo-text">
+      <h3>Cordon Ombilical</h3>
+      <span>Hon Kan</span>
+    </div>
+  </div>
+
+  <!-- Bouton menu mobile -->
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="domaines.html">Domaines d'intervention</a>
+    <a href="projets.html">Nos projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Croix fermer -->
+  <button class="menu-close" aria-label="Fermer le menu">✕</button>
+
+  <!-- Bouton don desktop -->
+  <a href="contact.html" class="btn-don">Faire un don</a>
+</header>
+<!-- ==================== FIN HEADER ==================== -->
+
+
+  <!-- ================= HERO ================= -->
+  <section class="projects-hero contact-hero">
+    <div class="projects-hero-inner">
+      <h1>Contactez-nous</h1>
+      <p>Nous sommes à votre écoute pour toute question ou collaboration</p>
+    </div>
+  </section>
+
+  <!-- ================= MAIN CONTACT (formulaire + coordonnées) ================= -->
+  <main class="contact-main">
+    <div class="container contact-grid">
+
+      <!-- LEFT : FORMULAIRE -->
+      <section class="contact-left">
+        <h3>Envoyez-nous un message</h3>
+
+        <!-- Formulaire : Mailto (Option B) -->
+        <!-- note: id & names importants pour JS -->
+        <form id="contactForm" class="contact-form" novalidate>
+          <!-- Nom -->
+          <label for="cf_name">Nom complet *</label>
+          <input id="cf_name" name="name" type="text" placeholder="Votre nom" required>
+
+          <!-- Email -->
+          <label for="cf_email">Email *</label>
+          <input id="cf_email" name="email" type="email" placeholder="votre@email.com" required>
+
+          <!-- Téléphone -->
+          <label for="cf_phone">Téléphone</label>
+          <input id="cf_phone" name="phone" type="tel" placeholder="+229 01 XX XX XX XX">
+
+          <!-- Sujet -->
+          <label for="cf_subject">Sujet *</label>
+          <select id="cf_subject" name="subject" required>
+            <option value="">Sélectionnez un sujet</option>
+            <option>Devenir bénévole</option>
+            <option>Faire un don</option>
+            <option>Demande d'information</option>
+            <option>Devenir bénéficiaire</option>
+            <option>Autre</option>
+          </select>
+
+          <!-- Message -->
+          <label for="cf_message">Message *</label>
+          <textarea id="cf_message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+
+          <!-- bouton -->
+          <div class="form-actions">
+            <button id="cf_submit" class="btn btn-primary" type="submit">Envoyer le message</button>
+          </div>
+
+          <!-- feedback accessible -->
+          <div id="cf_feedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
+        </form>
+      </section>
+
+      <!-- RIGHT : COORDONNÉES -->
+      <aside class="contact-right">
+        <h3>Nos coordonnées</h3>
+
+        <div class="coord-item">
+          <div class="coord-icon">📍</div>
+          <div>
+            <strong>Adresse</strong>
+            <div>123 Avenue de la Solidarité<br>Quartier Central<br>Ville, Pays</div>
+          </div>
+        </div>
+
+        <div class="coord-item">
+          <div class="coord-icon">📞</div>
+          <div>
+            <strong>Téléphone</strong>
+            <div>+000 00 00 00 00<br>+000 00 00 00 01</div>
+          </div>
+        </div>
+
+        <div class="coord-item">
+          <div class="coord-icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <div>contact@cordonombilical.org<br>info@cordonombilical.org</div>
+          </div>
+        </div>
+
+        <div class="coord-item">
+          <div class="coord-icon">🕒</div>
+          <div>
+            <strong>Horaires</strong>
+            <div>Lundi - Vendredi : 9h00 - 17h00<br>Samedi : 9h00 - 13h00<br>Dimanche : Fermé</div>
+          </div>
+        </div>
+
+        <div class="social-box">
+             <h4>Suivez-nous sur les réseaux sociaux</h4>
+             <p>Restez informés de nos actualités et découvrez nos histoires inspirantes</p>
+
+             <div class="social-links">
+                 <a href="#" class="social-icon">
+                   <img src="icons/whatsapp.png" alt="WhatsApp">
+                 </a>
+
+                 <a href="#" class="social-icon">
+                  <img src="icons/facebook.png" alt="Facebook">
+                </a>
+            </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ================= SECTION : VENEZ NOUS RENDRE VISITE (CARTE PHOTO) ================= -->
+  <section class="visit-section">
+    <div class="container visit-inner">
+      <h3>Venez nous rendre visite</h3>
+      <p>Notre bureau est ouvert du lundi au samedi</p>
+
+      <!-- ici on garde la photo (maquette) : remplace contact-map.jpg par ton image -->
+      <div class="map-card">
+        <img src="images/maps.JPG" alt="Carte interactive (placeholder)">
+        <div class="map-caption">
+          <div class="map-icon">📍</div>
+          <div class="map-text">Carte interactive<br><small>(Intégration Google Maps à venir)</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION FAQ (cartes arrondies) ================= -->
+  <section class="faq-section">
+    <div class="container">
+      <h3 class="faq-title">Questions fréquentes</h3>
+
+      <div class="faq-grid">
+        <article class="faq-card">
+          <h4>Comment puis-je devenir bénévole ?</h4>
+          <p>Vous pouvez remplir le formulaire ci-dessus en sélectionnant "Devenir bénévole" ou nous contacter directement par email.</p>
+        </article>
+
+        <article class="faq-card">
+          <h4>Comment puis-je faire un don ?</h4>
+          <p>Vous pouvez faire un don en ligne via notre site ou directement à notre siège. Nous acceptons dons financiers, matériels et en nature.</p>
+        </article>
+
+        <article class="faq-card">
+          <h4>Comment bénéficier de vos programmes ?</h4>
+          <p>Contactez-nous via le formulaire en sélectionnant "Devenir bénéficiaire". Nous évaluerons votre situation et vous orienterons vers le bon programme.</p>
+        </article>
+
+        <article class="faq-card">
+          <h4>Autre question</h4>
+          <p>Pour toute autre demande, utilisez le formulaire ci-dessus ou écrivez à alexlejuste71@gmail.com.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FOOTER (remplacé) ====================== -->
+<footer class="site-footer">
+  <div class="footer-inner container">
+    <!-- COLONNE 1 : logo + description -->
+    <div class="footer-col footer-col--brand">
+      <!-- logo identique au header (pas une image) -->
+      <div class="logo footer-logo-inline">
+        <div class="logo-circle">CO</div>
+        <div class="logo-text">
+          <h3>Cordon Ombilical</h3>
+          <span>Hon Kan</span>
+        </div>
+      </div>
+
+      <p class="footer-desc">
+        Une association humanitaire dédiée au soutien des femmes et à l’éducation des jeunes.
+      </p>
+    </div>
+
+    <!-- COLONNE 2 : navigation rapide -->
+    <div class="footer-col footer-col--nav">
+      <h4 class="footer-title">Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="domaines.html">Domaines d'intervention</a></li>
+        <li><a href="projets.html">Nos projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- COLONNE 3 : contact + réseaux -->
+    <div class="footer-col footer-col--contact">
+      <h4 class="footer-title">Contact</h4>
+      <ul class="contact-list">
+        <li>📍 Bohicon, Bénin</li>
+        <li>📞 +229 01 96 12 39 44</li>
+        <li>📧 contact@cordonombilical.org</li>
+      </ul>
+
+      <div class="footer-socials">
+        <!-- Assure-toi d'avoir les icônes dans /icons/ -->
+        <a href="#" aria-label="WhatsApp"><img src="icons/whatsapp.png" alt="WhatsApp"></a>
+        <a href="#" aria-label="Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom container">
+    <div class="footer-bottom-line"></div>
+    <small>© <span id="footerYear"></span> Cordon Ombilical – Hon Kan. Tous droits réservés.</small>
+  </div>
+</footer>
+<!-- ====================== FIN FOOTER ====================== -->
+  <!-- ================= SCRIPTS ================= -->
+  <script src="js/script.js"></script>
+</body>
+</html>
